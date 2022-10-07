@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import Home from './Home';
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import { style } from '@mui/system';
+import { selectCars } from '../features/car/carSlice';
+import { useSelector } from 'react-redux';
 
 function Header() {
 
   const [burgerStatus, setBurgerStatus] = useState(false);
+  const cars = useSelector(selectCars)
 
   return (
     <Container>
@@ -15,11 +17,9 @@ function Header() {
         <img src="/images/logo.svg" alt='' />
       </a>
       <LeftMenu>
-        <a href="#">Model-S</a>
-        <a href="#">Model-X</a>
-        <a href="#">Model-X</a>
-        <a href="#">Model-3</a>
-        <a href="#">Model-Y</a>
+        { cars && cars.map((car, index) => (
+          <a key={index} href="#">{car}</a>
+        )) }
       </LeftMenu>
       <RightMenu>
         <a href="#">Shop</a>
@@ -30,10 +30,11 @@ function Header() {
         <CustomCloseBox>
           <CustomClose onClick={() => setBurgerStatus(false)} />
         </CustomCloseBox>
-        <li><a href='#'>Tesla item 1</a></li>
-        <li><a href='#'>Tesla item 2</a></li>
-        <li><a href='#'>Tesla item 3</a></li>
-        <li><a href='#'>Tesla item 4</a></li>
+        
+        { cars && cars.map((car, index) => (
+          <li><a key={index} href="#">{car}</a></li>
+        )) }
+        
         <li><a href='#'>Tesla item 5</a></li>
         <li><a href='#'>Tesla item 6</a></li>
         <li><a href='#'>Tesla item 7</a></li>
