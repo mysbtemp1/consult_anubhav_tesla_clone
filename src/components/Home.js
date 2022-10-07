@@ -5,7 +5,22 @@ import Section from './Section'
 function Home() {
   return (
     <Container>
-        <Section />
+        <Section 
+            title="Model S" 
+            backgroundImg="model-s.jpg"
+        />
+        <Section 
+            title="Model X" 
+            backgroundImg="model-x.jpg"
+        />
+        <Section 
+            title="Model Y" 
+            backgroundImg="model-y.jpg"
+        />
+        <Section 
+            title="Model 3" 
+            backgroundImg="model-3.jpg"
+        />
     </Container>
   )
 }
