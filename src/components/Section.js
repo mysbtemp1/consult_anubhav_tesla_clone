@@ -1,21 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Section({title, description, backgroundImg, LeftBtnText, RightBtnText}) {
+function Section({title, description, backgroundImg, LeftBtnText, RightBtnText, itemTextColor}) {
   return (
     <Wrap bgImage={ backgroundImg }>
         <ItemText>
-            <h1>{ title }</h1>
-            <p>Order online for touchless delivery</p>
+            <TitleBlock textColor={itemTextColor}>{ title }</TitleBlock>
+            <DescBlock textColor={itemTextColor}>{ description }</DescBlock>
         </ItemText>
         <Buttons>
             <ButtonGroup>
-                <LeftButton>
-                    Custom Order
-                </LeftButton>
-                <RightButton>
-                    Existing Inventory
-                </RightButton>
+
+                { LeftBtnText &&
+                    <LeftButton>
+                        { LeftBtnText }
+                    </LeftButton>
+                }
+
+                { RightBtnText &&
+                    <RightButton>
+                        { RightBtnText }
+                    </RightButton>
+                }
+
             </ButtonGroup>
             <DownArrow src="/images/down-arrow.svg" />
         </Buttons>
@@ -78,6 +85,14 @@ const DownArrow = styled.img`
     height: 40px;
     animation: animationDown infinite 1.5s;
     overflow-x: hidden;
+`
+
+const TitleBlock = styled.h1`
+    color: ${props => `${props.textColor}` }
+`
+
+const DescBlock = styled.p`
+    color: ${props => `${props.textColor}` }
 `
 
 const Buttons = styled.div`
