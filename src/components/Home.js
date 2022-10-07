@@ -62,7 +62,7 @@ function Home() {
             backgroundImg="new-interior.jpg"
             description="Call us for your interior and renovation."
             RightBtnText="Contact Us"
-            titleTextColor="white"
+            titleTextColor="dark"
             descTextColor="dark"
         />
     </Container>
