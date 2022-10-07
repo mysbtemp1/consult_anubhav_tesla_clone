@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Section({title, description, backgroundImg, LeftBtnText, RightBtnText, itemTextColor}) {
+function Section({title, description, backgroundImg, LeftBtnText, RightBtnText, titleTextColor, descTextColor}) {
   return (
     <Wrap bgImage={ backgroundImg }>
         <ItemText>
-            <TitleBlock textColor={itemTextColor}>{ title }</TitleBlock>
-            <DescBlock textColor={itemTextColor}>{ description }</DescBlock>
+            <TitleBlock textColor={titleTextColor}>{ title }</TitleBlock>
+            <DescBlock textColor={descTextColor}>{ description }</DescBlock>
         </ItemText>
         <Buttons>
             <ButtonGroup>
@@ -43,7 +43,7 @@ const Wrap = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: ${props => `url("/images/${props.bgImage}")` }
+    background-image: ${props => `url("/images/${props.bgImage}")` };
 `
 const ItemText = styled.div`
     padding-top: 15vh;
@@ -88,11 +88,14 @@ const DownArrow = styled.img`
 `
 
 const TitleBlock = styled.h1`
-    color: ${props => `${props.textColor}` }
+    color: ${props => `${props.textColor}` };
+    margin-bottom: 15px;
+    margin-top: 10px;
 `
 
 const DescBlock = styled.p`
-    color: ${props => `${props.textColor}` }
+    font-size: 20px;
+    color: ${props => `${props.textColor}` };
 `
 
 const Buttons = styled.div`

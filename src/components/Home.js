@@ -11,6 +11,8 @@ function Home() {
             description="Order online for touchless delivery"
             LeftBtnText="Custom Order"
             RightBtnText="Existing Inventory"
+            titleTextColor="dark"
+            descTextColor="black"
         />
         <Section 
             title="Model X" 
@@ -18,6 +20,8 @@ function Home() {
             description="Order online for touchless delivery"
             LeftBtnText="Custom Order"
             RightBtnText="Existing Inventory"
+            titleTextColor="dark"
+            descTextColor="black"
         />
         <Section 
             title="Model Y" 
@@ -25,7 +29,8 @@ function Home() {
             description="Order online for touchless delivery"
             LeftBtnText="Custom Order"
             RightBtnText="Existing Inventory"
-            itemTextColor="black"
+            titleTextColor="dark"
+            descTextColor="black"
         />
         <Section 
             title="Model 3" 
@@ -33,28 +38,32 @@ function Home() {
             description="Order online for touchless delivery"
             LeftBtnText="Custom Order"
             RightBtnText="Existing Inventory"
-            itemTextColor="black"
+            titleTextColor="dark"
+            descTextColor="black"
         />
         <Section 
             title="Solar Panel" 
             backgroundImg="solar-panel.jpg"
             description="Buy excellent sollar panels from us."
             RightBtnText="Buy"
-            itemTextColor="black"
+            titleTextColor="dark"
+            descTextColor="black"
         />
         <Section 
             title="Solar Roof" 
             backgroundImg="solar-roof.jpg"
             description="Buy solar roofs for your car."
             LeftBtnText="Order Now"
-            itemTextColor="black"
+            titleTextColor="dark"
+            descTextColor="black"
         />
         <Section 
             title="Interior Designer" 
             backgroundImg="new-interior.jpg"
             description="Call us for your interior and renovation."
             RightBtnText="Contact Us"
-            itemTextColor="white"
+            titleTextColor="white"
+            descTextColor="dark"
         />
     </Container>
   )
