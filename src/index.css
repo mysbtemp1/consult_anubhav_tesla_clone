@@ -14,9 +14,12 @@ body
 
 a
 {
+    text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
     padding: 0 10px;
+    cursor: pointer;
+    padding-top: 4px;
 }
 
 @keyframes animationDown {
